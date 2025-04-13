@@ -74,36 +74,31 @@ Due to data loss, most of the original code and CAD files were lost. This repo p
 - 🔧 CAD modeling and mechanical fabrication
 - 💻 PCB design and electronics wiring
 - 🍓 Raspberry Pi setup with Ubuntu + ROS Noetic
+- 🐍 Custom ROS node programming and launch file creation
+- 🎮 Teleop integration for manual control and testing
+- 🔋 Power system integration
 
-🐍 Custom ROS node programming and launch file creation
+---
 
-🎮 Teleop integration for manual control and testing
+## 💡 Key Takeaways
 
-🔋 Power system integration
+- ROS Noetic setup and workspace organization
+- Topic publishing/subscribing with Python ROS nodes
+- Interfacing Arduino with ROS over serial
+- The value of modular thinking in robot design
+- Managing complexity when integrating hardware and software
 
-💡 Key Takeaways
+---
 
-ROS Noetic setup and workspace organization
+## 👤 Author
 
-Topic publishing/subscribing with Python ROS nodes
+**Diego Méndez Carter**  
+Robotics & Mechatronics Engineer | Field Robotics Explorer  
+🔗 [GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourlinkedin)
 
-Interfacing Arduino with ROS over serial
+---
 
-The value of modular thinking in robot design
-
-Managing complexity when integrating hardware and software
-
-👤 Author
-
-Diego Méndez CarterRobotics & Mechatronics Engineer | Field Robotics Explorer🔗 GitHub • LinkedIn
-
-📜 License
-
-This repository is shared for educational and archival purposes. All media and concepts are original work unless stated otherwise.
-
-
-
-
+## 📜 License
 
 
 
