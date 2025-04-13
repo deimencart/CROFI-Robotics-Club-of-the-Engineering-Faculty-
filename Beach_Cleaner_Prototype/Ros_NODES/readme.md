@@ -70,8 +70,6 @@
 
 **Diego Méndez Carter**  
 Robotics Engineer | ROS Developer | Embedded Systems  
-🔗 [GitHub](https://github.com/deimencart)
-
 ---
 
 ## 📜 License
