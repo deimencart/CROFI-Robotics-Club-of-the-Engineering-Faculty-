@@ -1,0 +1,23 @@
+#Start ROS, Gazebo and catkin
+source /opt/ros/noetic/setup.bash 
+source /usr/share/gazebo/setup.sh
+. ~/catkin_ws/devel/setup.bash
+
+source devel/setup.bash
+
+
+
+cd ~/catkin_ws/src/EK_AutoNOMOS_Sim
+
+#Lanza archivo en gazebo con ros
+roslaunch autonomos_gazebo_simulation intersection.launch
+
+#inicializa gazebo en terminal
+
+
+TOPICS
+rostopic pub /AutoNOMOS_mini/manual_control/speed std_msgs/Int16 '{data: -50}'
+rostopic pub /AutoNOMOS_mini/manual_control/steering std_msgs/Int16 '{data: 90}'
+
+rosrun motion_plan reading_laser.py
+
