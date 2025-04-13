@@ -1,0 +1,7 @@
+#request message
+---
+
+#response message  
+string object_name
+bool succes 
+string status_message

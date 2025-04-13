@@ -1,0 +1,8 @@
+#request - peticion
+string object_name 
+
+---
+#Response -- datos que devuelven el ssssss
+float64 object_distance
+bool succes 
+string status_message
