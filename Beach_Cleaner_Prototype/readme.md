@@ -94,13 +94,11 @@ Due to data loss, most of the original code and CAD files were lost. This repo p
 
 **Diego Méndez Carter**  
 Robotics & Mechatronics Engineer | Field Robotics Explorer  
-🔗 [GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourlinkedin)
 
 ---
 
 ## 📜 License
-
-
+This repository is shared for educational and archival purposes. All media and concepts are original work unless stated otherwise.
 
 
 
