@@ -44,10 +44,12 @@ Designed for:
 ## 📷 Preview
 
 ### 🔧 Schematic View
-![image](https://github.com/user-attachments/assets/9dabec41-9018-40b3-8d3d-0a6489e4e8fd)
+![image](https://github.com/user-attachments/assets/10e82daf-3f52-4ddd-8b8c-d3cd1b74484b)
+
 
 ### 🖨️ PCB Layout
-![image](https://github.com/user-attachments/assets/0b3555f5-5a2d-417e-b5bc-47653441aa87)
+![image](https://github.com/user-attachments/assets/0209fffe-2345-4404-90be-3449e2af5d79)
+
 
 ---
 
