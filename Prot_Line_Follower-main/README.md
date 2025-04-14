@@ -60,7 +60,8 @@ Designed for:
 - Power management and protection
 - Integration of sensors and actuators
 - Documentation for reproducibility
-- ![image](https://github.com/user-attachments/assets/3a64012f-b55a-47fb-a420-efaf5ed01747)
+![image](https://github.com/user-attachments/assets/e12d2928-0e57-4314-9691-1bffe752548d)
+
 
 
 ---
