@@ -10,7 +10,8 @@ This project is a custom-designed shield for the **Arduino Nano**, tailored for 
 ---
 
 ## 🖥️ PCB Schematic
-![image](https://github.com/user-attachments/assets/9dabec41-9018-40b3-8d3d-0a6489e4e8fd)
+![image](https://github.com/user-attachments/assets/038c8d2a-8c9b-424b-af76-1df918dd50ae)
+
 ### 🔧 Main Features
 
 - **Microcontroller**: Arduino Nano (modular socket)
@@ -24,7 +25,7 @@ This project is a custom-designed shield for the **Arduino Nano**, tailored for 
 
 ## 🖲️ PCB Layout
 
-![image](https://github.com/user-attachments/assets/0b3555f5-5a2d-417e-b5bc-47653441aa87)
+![image](https://github.com/user-attachments/assets/09b4515d-f9eb-4127-974b-038ef3d00909)
 
 
 ### ⚙️ Design Highlights
