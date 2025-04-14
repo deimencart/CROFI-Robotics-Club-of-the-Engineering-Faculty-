@@ -1,7 +1,6 @@
 # 🔌 Arduino Nano Motor Driver Shield – Custom PCB for Robotics
 
-![image](https://github.com/user-attachments/assets/1adebfd1-da79-4633-8ce7-58c9390cc64c)
-
+![image](https://github.com/user-attachments/assets/23c8fef1-43e2-41d1-98cb-173361cd1247)
 
 
 > A compact, custom-designed motor driver shield for Arduino Nano, integrating dual DC motor control, button interface, voltage regulation, and status indicators – all in one PCB tailored for mobile robotic platforms.
