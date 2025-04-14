@@ -12,9 +12,6 @@ This is the **central repository** for:
 - 🛠️ Sharing schematics, PCB designs, Arduino/ROS code
 - 📸 Storing images, build logs, and test documentation
 
-```
-
-```
 Each folder contains:
 - 📝 A dedicated `README.md` with description and instructions
 - 💾 Code files and firmware
