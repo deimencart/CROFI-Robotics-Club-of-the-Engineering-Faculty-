@@ -1,4 +1,4 @@
-# 🚗 Obstacle Avoidance Robot – CRODI Training Project
+# 🚗 Obstacle Avoidance Robot – CROFI Training Project
 
 > A fully autonomous robot built as part of a robotics course taught by **CRODI**. This project introduced me to motion planning logic and real-time decision-making with basic sensors. The robot was designed and assembled from scratch using a minimalist yet effective approach to avoid obstacles.
 
