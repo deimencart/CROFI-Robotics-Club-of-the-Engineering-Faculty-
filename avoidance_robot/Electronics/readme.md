@@ -22,8 +22,7 @@
 ---
 
 ## 🧠 My Contributions
-
-- Designed full schematic and PCB layout in **Eagle CAD**
+- Used design from CROFI - Adrian Ricardez 
 - Implemented **standalone ATmega328P** setup (no Arduino board used)
 - Assigned proper footprints and trace widths for high-current paths
 - Planned component placement for mechanical alignment and routing efficiency
@@ -70,10 +69,15 @@ This PCB was intended to drive:
 
 ---
 
+
+## 👤 Mentor
+
+**Adrían Ricardez **  
+Robotics Engineer Tutor 
+
 ## 👤 Author
 
 **Diego Méndez Carter**  
-Robotics Engineer | Embedded Systems Designer  
 
 
 ---
