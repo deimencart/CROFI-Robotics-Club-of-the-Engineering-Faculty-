@@ -72,7 +72,7 @@ This PCB was intended to drive:
 
 ## 👤 Mentor
 
-**Adrían Ricardez **  
+**Adrían Ricardez**  
 Robotics Engineer Tutor 
 
 ## 👤 Author
