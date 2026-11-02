@@ -6,6 +6,9 @@
 
 ## 📸 Project Images
 
+### 🏎️ 2018 Competition Robot Benchmark & Test Run
+![2018 Robot Test Run](media/robot_run_2018.gif)
+
 ### 🟦 Minisumo Robot
 ![image](https://github.com/user-attachments/assets/3950b9c2-f68c-489a-81b2-3018cdce1d5f)
 
