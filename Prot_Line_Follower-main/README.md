@@ -41,7 +41,18 @@ Designed for:
 
 ---
 
-## 📷 Preview
+## 📷 Preview & Track Tests
+
+### 🏎️ Prototype Track Testing
+![Line Follower Track Run](media/line_follower_run.gif)
+
+### 🔧 Prototype Assembly & Bench Testing
+![Prototype Assembly](media/line_follower_prototype_assembly.jpg)
+
+### 📐 Schematic & Circuit Reference
+![Schematic Reference](media/schematic_reference_1.jpg)
+
+## 🔧 CAD & PCB Layout
 
 ### 🔧 Schematic View
 ![image](https://github.com/user-attachments/assets/10e82daf-3f52-4ddd-8b8c-d3cd1b74484b)
