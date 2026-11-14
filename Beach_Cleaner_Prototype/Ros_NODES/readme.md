@@ -1,78 +1,49 @@
-# 🧠 ROS Nodes – Beach Cleaner Robot
+# ROS Nodes — Beach Cleaner Teleoperation & Drive
 
-> This folder contains ROS nodes written for the **Beach Cleaner Robot** project, focused on **teleoperation and motor control**. Developed using **ROS Noetic**, the nodes enable real-time driving via keyboard and communication with **Roboclaw motor drivers**.
-
----
-
-## 📂 Included Nodes
-
-### 1. **Teleop Twist Keyboard**
-- Allows driving the robot with WASD keys over ROS topics
-- Publishes `geometry_msgs/Twist` to `/cmd_vel`
-- Configurable linear and angular velocities
-
-📄 File: `teleop_twist_keyboard.py`
+ROS Noetic nodes for teleoperation and motor actuation on the Beach Cleaner mobile platform.
 
 ---
 
-### 2. **Roboclaw Movement Node**
-- Subscribes to `/cmd_vel` Twist messages
-- Converts linear/angular velocity into motor commands
-- Communicates with Roboclaw via serial interface
-- Sends speed and direction to both motors
+## Included Nodes
 
-📄 File: `roboclaw_twist.py`
+### 1. `teleop_twist_keyboard.py`
+- Reads keyboard directional input (WASD) and publishes velocity targets.
+- Topic: `/cmd_vel`
+- Message Type: `geometry_msgs/Twist`
+- Parameters: Linear velocity scale ($v_x$), angular velocity scale ($\omega_z$).
+
+### 2. `driver_node.py`
+- Subscribes to `/cmd_vel` and converts $[v_x, \omega_z]$ into left/right differential wheel velocities using standard kinematic equations:
+  $$v_L = v_x - \frac{L}{2} \omega_z, \quad v_R = v_x + \frac{L}{2} \omega_z$$
+- Transmits PWM duty cycles over serial to the motor controller.
 
 ---
 
-## 🔧 System Architecture
+## Usage Instructions
 
+```bash
+# Terminal 1: ROS Master
+roscore
+
+# Terminal 2: Hardware Driver Node
+rosrun beach_cleaner driver_node.py
+
+# Terminal 3: Keyboard Teleoperation
+rosrun beach_cleaner teleop_twist_keyboard.py
 ```
-[Keyboard Input] ---> [teleop_twist_keyboard] ---> /cmd_vel ---> [roboclaw_twist] ---> [Roboclaw Motors]
-```
-
-- `teleop_twist_keyboard` → publishes velocities  
-- `roboclaw_twist` → interprets & sends movement to hardware
 
 ---
 
-## 🚀 How to Use
-
-1. Launch ROS core:
-   ```bash
-   roscore
-   ```
-
-2. Run Roboclaw motor node:
-   ```bash
-   rosrun ros_nodes roboclaw_twist.py
-   ```
-
-3. In another terminal, launch teleoperation:
-   ```bash
-   rosrun ros_nodes teleop_twist_keyboard.py
-   ```
-
-4. Use your keyboard to control the robot via terminal.
-
----
-
-## ⚙️ Requirements
+## Dependencies
 
 - ROS Noetic (Ubuntu 20.04)
-- Roboclaw motor controller
-- USB-to-serial adapter for hardware interface
-- `geometry_msgs`, `std_msgs`, `rospy`
+- `rospy`
+- `geometry_msgs`
+- `pyserial`
 
 ---
 
-## ✍️ Author
+## Author & License
 
-**Diego Méndez Carter**  
-Robotics Engineer | ROS Developer | Embedded Systems  
----
-
-## 📜 License
-
-This folder is part of the *Beach Cleaner Robot* project. Use it freely for educational or hobby robotics development.
-
+- **Diego Méndez Carter**
+- Licensed under the [MIT License](LICENSE).

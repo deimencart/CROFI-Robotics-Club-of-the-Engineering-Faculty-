@@ -1,71 +1,50 @@
-# 🤖 Minisumo & Soccer Junior Robots
+# Competition Mobile Robotics Prototypes (2018)
 
-> A retrospective showcase of two early robotics projects I built for competitions and learning, featuring full electronic and mechanical design. Although source code and files are no longer available, these builds represent key milestones in my development as a robotics engineer.
-
----
-
-## 📸 Project Images
-
-### 🏎️ 2018 Competition Robot Benchmark & Test Run
-![2018 Robot Test Run](media/robot_run_2018.gif)
-
-### 🟦 Minisumo Robot
-![image](https://github.com/user-attachments/assets/3950b9c2-f68c-489a-81b2-3018cdce1d5f)
-
-### ⚽ Soccer Junior Prototype (ROS-based)
-![image](https://github.com/user-attachments/assets/8e81086f-5c5d-46a0-aae9-58f2cd2ceb93)
+Technical and photographic archive of early competitive robotics platforms built at the Club de Robótica de la Facultad de Ingeniería (CROFI), UNAM.
 
 ---
 
-## 🧠 My Contributions
+## Prototype Archive
 
-### 🔹 Minisumo Robot (2018)
-- 🧩 **Electronics**: Designed and built fully standalone motor driver and control PCB (not Arduino-based).
-- 🛠️ **Chassis**: Fully designed and assembled the robot structure using lightweight materials.
-- ⚙️ **Tuning**: Manual calibration of motors and sensors for line sensing and sumo detection.
-- 🏆 Used in regional robotics club tournaments.
+### 1. 2018 Competition Benchmark Platform
+High-speed differential-drive test bench evaluating motor response curves, chassis balance, and reflective sensor timing.
 
----
-
-### 🔹 Soccer Junior Robot (2018)
-- 📦 **Chassis**: Fully custom 3D-printed & MDF-layered robot frame.
-- 📐 **Electronics**: Built sensor and motor interfacing system (ultrasonic, IR encoders).
-- 🤖 **ROS Integration**: My first attempt at using ROS to handle robot movement and perception.
-  - Learned basics of ROS nodes, topics, and sensor integration.
-  - Although the project had performance issues, it introduced me to robot middleware.
+![2018 Competition Robot Benchmark](media/robot_run_2018.gif)
 
 ---
 
-## 🧾 Notes
+### 2. Autonomous Minisumo Robot
+Designed and built for university minisumo tournaments.
 
-- These early builds shaped my passion for system integration and embedded control.
-- Lessons from these prototypes led to better PCB design, ROS programming, and mechanical design in future projects.
-- Even in the absence of code, I consider them formative experiences in multidisciplinary robotics.
+![Minisumo Robot](https://github.com/user-attachments/assets/3950b9c2-f68c-489a-81b2-3018cdce1d5f)
 
----
-
-## 🛠️ Technologies Used
-
-- ⚙️ DC Motors, H-Bridge
-- 🔋 LDO Regulators, custom PCB
-- 🔊 Ultrasonic Sensors, IR Receivers
-- 🛠️ 3D Printing, MDF prototyping
-- 🧠 ROS (Robot Operating System)
+- **Electronics**: Standalone custom motor driver board (discrete MOSFET / transistor H-bridge, non-Arduino architecture).
+- **Chassis**: Lightweight aluminum wedge frame for opponent lifting and traction maintenance.
+- **Sensing**: Downward-facing phototransistors for ring border detection and frontal IR sensors for opponent localization.
 
 ---
 
-## 👤 Author
+### 3. Soccer Junior Robot Prototype
+Autonomous mobile platform developed under RoboCup Junior soccer specifications.
 
-**Diego Méndez Carter**  
-Robotics Engineer | Embedded Systems | Early ROS Explorer  
+![Soccer Junior Prototype](https://github.com/user-attachments/assets/8e81086f-5c5d-46a0-aae9-58f2cd2ceb93)
 
+- **Mechanical Design**: Layered 3D-printed components with an MDF core structure.
+- **Sensor Suite**: Dual frontal ultrasonic rangefinders and optical wheel encoders.
+- **Middleware**: Early integration of ROS nodes for wheel velocity setpoint dispatch and sensor polling.
 
 ---
 
-## 📜 License
+## Hardware Specifications
 
-All media and content in this repository are released for personal documentation and educational purposes.
+- **Actuation**: Pololu micro metal gearmotors, L298N and discrete H-bridges.
+- **Power**: 7.4V LiPo battery packs, linear LDO regulators (5V logic rail).
+- **Sensing**: Ultrasonic transducers (HC-SR04), sharp analog IR distance sensors, QTR reflectance pairs.
+- **Manufacturing**: 3D printing (PLA), laser-cut MDF, and machined aluminum.
 
+---
 
+## Author & License
 
-
+- **Diego Méndez Carter**  
+- Shared under the [MIT License](LICENSE) for technical portfolio reference.

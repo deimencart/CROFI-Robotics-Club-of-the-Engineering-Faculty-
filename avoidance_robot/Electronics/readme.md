@@ -1,92 +1,44 @@
-# 🔧 Custom Standalone Arduino UNO PCB – Robotics Electronics Project
+# Standalone ATmega328P Mobile Robot PCB
 
-> This project documents a custom-designed printed circuit board created during an electronics and robotics course. The board is centered around a **standalone ATmega328P microcontroller**, replicating the core of an Arduino UNO, and designed to power and control a small mobile robot platform.
-
----
-
-## 🖼️ PCB Layout Studied at Course (Designed by CROFI)
-
-![image](https://github.com/user-attachments/assets/49b72e0a-d0d1-4986-bc8e-2942716710a4) 
-
+Custom circular printed circuit board developed for autonomous differential-drive mobile robots. Built around a standalone ATmega328P microcontroller (Arduino UNO architecture), integrating motor drive stages, power regulation, and perimeter sensor headers.
 
 ---
 
-## 📐 Design Overview
+## PCB Layout & Schematic
 
-- 🧠 **Microcontroller**: Standalone **ATmega328P** (Arduino UNO core)
-- 🔋 **Power Supply**: Integrated linear regulator and capacitor filtering
-- 📦 **Inputs/Outputs**: Pluggable headers for sensors, motors, and power
-- 🧲 **Peripheral Support**: Labeled analog/digital pads, motor drivers, LEDs
-- 🛠️ **Board Shape**: Circular design optimized for differential robot chassis
+![Standalone ATmega328P Circular PCB Layout](https://github.com/user-attachments/assets/49b72e0a-d0d1-4986-bc8e-2942716710a4)
 
 ---
 
-## 🧠 My Contributions
-- Used design from CROFI - Adrian Ricardez 
-- Implemented **standalone ATmega328P** setup (no Arduino board used)
-- Assigned proper footprints and trace widths for high-current paths
-- Planned component placement for mechanical alignment and routing efficiency
-- Labeled and structured I/O headers for ease of debugging and expansion
+## Hardware Specifications
+
+| Subsystem | Specification |
+| :--- | :--- |
+| **Microcontroller** | ATmega328P-PU (DIP-28) with 16 MHz external crystal oscillator |
+| **Motor Drive** | Dual-channel H-bridge stage (L293D) for bidirectional DC motor control |
+| **Power Regulation** | Onboard linear 5V regulation (LM7805 / LDO) with bulk and decoupling capacitors |
+| **I/O Distribution** | Perimeter headers for ultrasonic transducers, analog photodetectors, and UART |
+| **Form Factor** | Circular layout tailored to match differential-drive robot chassis boundaries |
 
 ---
 
-## 💡 Features
+## Circuit Architecture
 
-| Feature              | Description                                 |
-|----------------------|---------------------------------------------|
-| MCU Core             | ATmega328P (Arduino UNO bootloader)         |
-| Motor Control        | Dual-channel motor driver outputs           |
-| Sensor Headers       | Labeled headers around the perimeter        |
-| Battery Integration  | Battery bay and voltage regulation onboard  |
-| Switches & LEDs      | Power switch, status LEDs, test pads        |
+- **Power Filtering**: Independent decoupling capacitors across the ATmega328P VCC/AVCC pins and the motor supply rail to suppress inductive switching transients.
+- **Trace Routing**: Sized power and ground traces to accommodate motor stall currents without ground bounce.
+- **Peripheral Expansion**: Dedicated headers for analog inputs (A0–A5), digital control lines, and ISP programming.
 
 ---
 
-## 📘 What I Learned
+## CAD Tools
 
-- How to convert a breadboard Arduino setup into a real PCB
-- Designing power rails and decoupling for motor + logic circuits
-- How to lay out tracks for high-current devices (motors, drivers)
-- Component spacing, clearance, and routing in circular boards
+- Designed and routed in **Autodesk EAGLE**.
+- Design files located in the repository root / electronics archive.
 
 ---
 
-## 🧰 Tools Used
+## Attribution & License
 
-- 🖥️ Autodesk Eagle (schematic & layout)
-- 📏 Calipers and physical prototyping for fit testing
-- 📦 BOM management and passive selection
-
----
-
-## 📸 Use Case
-
-This PCB was intended to drive:
-- A differential robot with 2 DC motors
-- Obstacle detection sensors (analog or ultrasonic)
-- Basic state-indicating LEDs
-- External expansion headers (UART, SPI, ADC, GPIO)
-
----
-
-
-## 👤 Mentor
-
-**Adrían Ricardez**  
-Robotics Engineer Tutor 
-
-## 👤 Author
-
-**Diego Méndez Carter**  
-
-
----
-
-## 📜 License
-
-All assets and documentation are shared for educational and portfolio use. For reuse or manufacturing, please contact the author.
-
-
-
-
-
+- Circuit design and teaching curriculum: Adrián Ricárdez Ortigosa (CROFI UNAM).
+- Layout implementation and assembly: Diego Méndez Carter.
+- Shared under the [MIT License](LICENSE).

@@ -1,62 +1,37 @@
-# 🚗 Obstacle Avoidance Robot – CROFI Training Project
+# Obstacle Avoidance Robot
 
-> A fully autonomous robot built as part of a robotics course taught by **CRODI**. This project introduced me to motion planning logic and real-time decision-making with basic sensors. The robot was designed and assembled from scratch using a minimalist yet effective approach to avoid obstacles.
-
----
-
-## 📸 Project Photo
-![image](https://github.com/user-attachments/assets/a29bb5a2-5ea9-40a2-a7e1-3accfdd24146)
+Autonomous mobile robot prototype built during the robotics coursework at the Club de Robótica de la Facultad de Ingeniería (CROFI), UNAM. The platform implements reactive obstacle avoidance using discrete analog logic and infrared proximity sensors.
 
 ---
 
-## 🎯 Project Goals
+## Hardware Overview
 
-- Learn core principles of obstacle detection and evasion
-- Apply practical electronics design in real-world robotics
-- Understand timing, motor control, and sensor signal reading
-- Develop basic autonomous navigation strategies
-
----
-
-## 🧠 My Contributions
-
-- 🛠️ **Chassis Design**: Created and machined a custom baseplate for stability and sensor coverage.
-- ⚡ **Electronics**: Manually placed and soldered all components on a discrete circuit board (non-Arduino).
-- 🔌 **Sensor Integration**: Used infrared sensors for proximity detection, with logic-based direction switching.
-- ⚙️ **Motor Control**: H-Bridge driven, allowing bi-directional control of both motors.
+- **Chassis**: Custom-machined baseplate with dual differential-drive DC gearmotors.
+- **Sensing**: Infrared proximity sensors arranged for 180° frontal obstacle detection.
+- **Actuation & Logic**: Hardware-based H-bridge motor driver with discrete logic switching (reactive direction control without microcontroller overhead).
 
 ---
 
-## 💡 Features
+## Prototype Media
 
-- Dual motor drive with large wheels for stability
-- Peripheral IR sensors for 180° front detection
-- Discrete electronics (no microcontroller)
-- Reactive behavior based on hardware logic
+![Obstacle Avoidance Robot Prototype](https://github.com/user-attachments/assets/a29bb5a2-5ea9-40a2-a7e1-3accfdd24146)
 
 ---
 
-## 🧰 Technologies Used
+## Subdirectories
 
-- IR sensors
-- Discrete logic and passives (transistors, resistors, capacitors)
-- Gear DC motors + wheels
-- Custom PCB and hand-wired board
-- CROFI training materials and methodology
+- [`code/`](code/): Firmware and navigation algorithms for the ultrasonic/photodetector labyrinth robot variant (ATmega328P).
+- [`Electronics/`](Electronics/): Autodesk EAGLE schematics, board layout, and documentation for the standalone circular ATmega328P PCB.
 
 ---
 
-## 📜 License
+## Author & Attribution
 
-This project was developed for educational purposes under the CROFI program.  
-All images and documentation are shared for portfolio and non-commercial use.
+- **Diego Méndez Carter** (Chassis assembly, discrete hardware soldering, testing)
+- Course instruction and curriculum by CROFI (UNAM)
 
 ---
 
-## 👤 Author
+## License
 
-**Diego Méndez Carter**  
-Robotics Engineer | Component Specialist | CROFI Alumni  
-
-
-
+Shared under the [MIT License](LICENSE) for educational and portfolio reference.

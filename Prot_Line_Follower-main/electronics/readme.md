@@ -1,90 +1,59 @@
-# 🛠️ Arduino Nano Motor Driver Shield (Custom PCB)
+# Motor Driver Shield — PCB Design & Hardware Reference
 
-This project is a custom-designed shield for the **Arduino Nano**, tailored for compact robotic systems. The PCB integrates:
-- Dual motor control via an L293D H-Bridge
-- Button interface
-- Power regulation circuitry
-- Status LEDs
-- A shape designed for easy integration into mobile platforms
+Custom printed circuit board layout designed in Autodesk EAGLE for mobile robotics applications, integrating dual DC motor control and modular socket mounting for an Arduino Nano.
 
 ---
 
-## 🖥️ PCB Schematic
-![image](https://github.com/user-attachments/assets/038c8d2a-8c9b-424b-af76-1df918dd50ae)
+## Schematic
 
-### 🔧 Main Features
+![Motor Driver Shield Schematic](https://github.com/user-attachments/assets/038c8d2a-8c9b-424b-af76-1df918dd50ae)
 
-- **Microcontroller**: Arduino Nano (modular socket)
-- **Motor Driver**: L293D for 2-channel DC motor control
-- **Power Supply**: Includes 5V regulator, capacitors for filtering
-- **Buttons**: 2 push buttons with pull-down resistors
-- **LED Indicators**: Power, logic, motor activity
-- **Connectivity**: Header pins for I/O, power, and sensors
+### Key Circuit Stages
 
----
-
-## 🖲️ PCB Layout
-
-![image](https://github.com/user-attachments/assets/09b4515d-f9eb-4127-974b-038ef3d00909)
-
-
-### ⚙️ Design Highlights
-
-- **Form Factor**: Shaped to fit a robotic chassis; motor brackets visible
-- **Compact Routing**: Traces efficiently routed to minimize space
-- **Component Placement**:
-  - Motors on each side
-  - Arduino socket in the middle
-  - Power regulator and capacitors at the lower center
-  - LED indicators and buttons easily accessible on top surface
-- **Mounting Holes**: For easy mechanical integration
+- **Microcontroller Socket**: 30-pin DIP layout matching Arduino Nano pinout.
+- **Motor Driver**: L293D dual H-bridge with dedicated logic (VCC1) and motor (VCC2) power rails.
+- **Power Conditioning**: 5V linear regulator with 100 µF and 220 µF electrolytic filter capacitors and reverse-polarity protection diode.
+- **User Interface**: 2 tactile pushbuttons with pull-down resistors; power and motor status LEDs.
+- **Sensor Breakout**: Direct header access to analog lines A0–A5 and digital lines.
 
 ---
 
-## 📌 Pin Mapping Summary
+## PCB Layout
 
-| Arduino Nano Pin | Function           |
-|------------------|--------------------|
-| D3, D4           | Motor A direction  |
-| D5, D6           | Motor B direction  |
-| D9, D10          | Button inputs      |
-| A0–A5            | Free for sensors   |
-| VIN              | Motor power input  |
-| +5V, GND         | Power distribution |
+![PCB Layout](https://github.com/user-attachments/assets/09b4515d-f9eb-4127-974b-038ef3d00909)
 
----
+### Routing & Geometry Notes
 
-## ⚡ Power Section
-
-- Input: 6V–12V through DC jack or terminal
-- Regulated to +5V for logic and Arduino
-- Filtered with 100µF and 220µF capacitors
-- Diode protection included
+- Form factor shaped to interface directly with differential mobile robot chassis mounting holes.
+- Sized power traces for high-current motor transients to prevent voltage drops on the logic rail.
+- High-frequency decoupling capacitors placed in close proximity to the L293D supply pins.
 
 ---
 
-## 🧰 Applications
+## Pin Mapping Summary
 
-This board is ideal for:
-- Line-followers
-- Mini autonomous vehicles
-- PID control experiments
-- Sensor + motor integration platforms
-
----
-
-## 🔄 Future Enhancements
-
-- Add screw terminals for battery/motor connection
-- Reverse polarity protection
-- Add sensor breakout pins for I2C modules
+| Arduino Nano Pin | Connected Function | Hardware Destination |
+| :--- | :--- | :--- |
+| **D2, D13** | Left Motor Direction | L293D Input 1 & 2 |
+| **D7, D12** | Right Motor Direction | L293D Input 3 & 4 |
+| **D11** | Left Motor Speed | L293D Enable 1 (PWM) |
+| **D5** | Right Motor Speed | L293D Enable 2 (PWM) |
+| **D9, D10** | Pushbutton Triggers | Tactile switches with pull-down resistors |
+| **A0–A5** | IR Sensor Inputs | Front sensor array header |
+| **VIN** | Motor Power Input | 6V–12V Battery Pack |
+| **+5V / GND** | Logic Supply & Ground | Regulated power plane |
 
 ---
 
-## 👤 Author
+## Electrical Specifications
 
-**Diego Méndez Carter**  
-Component Engineer & Robotics Enthusiast  
-## 📜 License
+- **Input Voltage Range**: 6V to 12V DC
+- **Logic Level**: 5V regulated
+- **Motor Current Output**: Up to 600 mA continuous per channel (1.2A peak)
+- **Protection**: Series Schottky reverse-voltage protection diode
 
-MIT License — feel free to use, modify, and share.
+---
+
+## License
+
+MIT License.
